@@ -1,6 +1,7 @@
 package Stack;
 
 import java.util.Stack;
+//good question
 
 public class Maximum_sum_of_good_subarray {
     public static void main(String[] args) {

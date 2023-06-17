@@ -1,7 +1,7 @@
 package Stack;
 
 import java.util.Stack;
-
+// good question
 public class Stock_span {
     public static void main(String[] args) {
         int arr[]={91,11,13,15,42,37};

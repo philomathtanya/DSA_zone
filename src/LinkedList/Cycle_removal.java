@@ -37,11 +37,11 @@ public class Cycle_removal {
         fast.next = null;
     }
     public static void main(String[] args) {
-        Node nn= new Node(10);
-        nn.next=new Node(20);
-        nn.next.next=new Node(30);
-        nn.next.next.next=new Node(40);
-        nn.next.next.next.next=new Node(50);
+        Node nn= new Node(1);
+        nn.next=new Node(2);
+        nn.next.next=new Node(3);
+        nn.next.next.next=new Node(4);
+        nn.next.next.next.next=new Node(5       );
         Node tail=nn.next.next.next.next;
         Cycle_removal ll=new Cycle_removal();
         ll.create_cycle(nn,tail);
