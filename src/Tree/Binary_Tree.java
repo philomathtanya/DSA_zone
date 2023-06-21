@@ -1,5 +1,6 @@
 package Tree;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Binary_Tree {
@@ -86,12 +87,72 @@ return Math.max(lmax,Math.max(rmax,root.data));
         display(root.left);
         display(root.right);
     }
+    public static void preorder(NodeT root)
 
+    {
+        if(root==null)
+        {
+            return;
+        }
+        System.out.print(root.data+" ");
+        preorder(root.left);
+        preorder(root.right);
+    }
+    public static void postorder(NodeT root)
+
+    {
+        if(root==null)
+        {
+            return;
+        }
+
+        postorder(root.left);
+        postorder(root.right);
+        System.out.print(root.data+" ");
+    }
+    public static void inorder(NodeT root)
+
+    {
+        if(root==null)
+        {
+            return;
+        }
+
+        inorder(root.left);
+        System.out.print(root.data+" ");
+        inorder(root.right);
+    }
+    public static void levelorder()
+    {
+        LinkedList<NodeT>queue=new LinkedList<NodeT>();
+        queue.add(root);
+        while(!queue.isEmpty())
+        {
+            NodeT rv=queue.remove();
+            System.out.print(rv.data+" ");
+            if(rv.left!=null)
+            {
+                queue.add(rv.left);
+            }
+            if(rv.right!=null)
+            {
+                queue.add(rv.right);
+            }
+
+        }
+        System.out.println();
+
+    }
     public static void main(String[] args) {
         Binary_Tree bt=new Binary_Tree();
-        bt.display(root);
-        System.out.println( bt.max(root));
-        System.out.println(bt.find(root,40));
-        System.out.println(height(root));
+//        bt.display(root);
+//        System.out.println( bt.max(root));
+//        System.out.println(bt.find(root,40));
+//        System.out.println(height(root));
+//        bt.preorder(root);
+//        bt.postorder(root);
+//        bt.inorder(root);
+        bt.levelorder();
+
     }
 }
