@@ -28,6 +28,7 @@ public class Sum_root_to_leaf {
         return nn;
 
     }
+    //same as code path sum
     public int roottoleaf(NodeT root, int n)
     {
         if(root==null)
