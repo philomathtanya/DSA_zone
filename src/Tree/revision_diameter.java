@@ -1,6 +1,6 @@
 package Tree;
 
-
+//optimised version
 
 import java.util.Scanner;
 
