@@ -6,7 +6,7 @@ class NodeT{
    NodeT() {
     }
 
-   NodeT(int val) {
+   NodeT(int data){
         this.data = data;
     }
 
